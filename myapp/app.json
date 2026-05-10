@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "myapp",
-    "slug": "myapp",
+    "name": "Fasal Sathi",
+    "slug": "fasal-sathi",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/fasal-sathi.png",
+    "scheme": "fasal-sathi",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

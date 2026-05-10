@@ -41,7 +41,7 @@ export default function DashboardScreen() {
         </View>
 
         <TouchableOpacity
-          onPress={() => router.push('/alerts')}
+          onPress={() => router.push('/notifications/alert')} // Notification screen ka route yahan check kar lena
           className="w-11 h-11 rounded-full bg-white border border-slate-200 items-center justify-center shadow-sm shadow-slate-200"
         >
           <Bell color="#475569" size={20} />
@@ -113,13 +113,14 @@ export default function DashboardScreen() {
         {/* ── QUICK ACTIONS ── */}
         <View className="flex-row justify-between items-center px-6 pt-8 pb-4">
           <Text style={{ fontFamily: 'Poppins_700Bold', fontSize: 18, color: '#0f172a' }}>Quick Actions</Text>
+          
         </View>
         <View className="flex-row flex-wrap px-5 justify-between">
           {[
-            { label: 'Crop Scan',   sub: 'AI Disease Check', bg: '#eff6ff', icon: <Scan color="#2563eb" size={22} />,         route: '/scan/scan-result' },
-            { label: 'My Farm',     sub: 'Manage 4 Crops',   bg: '#ecfdf5', icon: <Sprout color="#059669" size={22} />,       route: '/farm/my-farm' },
-            { label: 'Agri Store',  sub: 'Buy Fertilizers',  bg: '#fff7ed', icon: <ShoppingBag color="#ea580c" size={22} />, route: '/shop/find-store' },
-            { label: 'Expert Call', sub: 'Agronomist Help',  bg: '#f5f3ff', icon: <PhoneCall color="#7c3aed" size={22} />,   route: '/expert/expert-help' },
+            { label: 'Crop Scan',   sub: 'AI Disease Check', bg: '#eff6ff', icon: <Scan color="#2563eb" size={22} />,         route: '/scanner' },
+            { label: 'My Farm',     sub: 'Manage 4 Crops',   bg: '#ecfdf5', icon: <Sprout color="#059669" size={22} />,       route: '/farm/my-farm' }, // Farm management screen ka route yahan check kar lena
+            { label: 'Agri Store',  sub: 'Buy Fertilizers',  bg: '#fff7ed', icon: <ShoppingBag color="#ea580c" size={22} />, route: '/404' }, // E-commerce screen ka route yahan check kar lena
+            { label: 'Expert Call', sub: 'Agronomist Help',  bg: '#f5f3ff', icon: <PhoneCall color="#7c3aed" size={22} />,   route: '/404' },// Expert consultation screen ka route yahan check kar lena
           ].map((a, i) => (
             <TouchableOpacity
               key={i}
@@ -141,7 +142,7 @@ export default function DashboardScreen() {
         {/* ── MY CROPS ── */}
         <View className="flex-row justify-between items-center px-6 pt-6 pb-4">
           <Text style={{ fontFamily: 'Poppins_700Bold', fontSize: 18, color: '#0f172a' }}>My Crops</Text>
-          <TouchableOpacity onPress={() => router.push('/farm/manage-crops')}>
+          <TouchableOpacity onPress={() => router.push('/404')}>
             <Text className="text-[13px] text-emerald-600" style={{ fontFamily: 'Poppins_600SemiBold' }}>View All</Text>
           </TouchableOpacity>
         </View>

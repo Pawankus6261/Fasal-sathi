@@ -33,8 +33,16 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
+        <Stack.Screen name="scan/scan-result" options={{ headerShown: false }} />
+        <Stack.Screen name="scan/scan-history" options={{ headerShown: false }} />
+        <Stack.Screen name="notifications/alert" options={{ headerShown: false }} />
+        <Stack.Screen name="farm/my-farm" options={{ headerShown: false }} />
+        <Stack.Screen name="farm/edit-farm" options={{ headerShown: false }} />
+        <Stack.Screen name="farm/crops-details" options={{ headerShown: false }} />
+
+        <Stack.Screen name="404" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
